@@ -5,7 +5,6 @@
 '''
 from poium import Page, PageElement
 from page.main import Mainpage
-import time
 
 class Loginpage(Page):
     loginname_loc = PageElement(name='loginName')
@@ -18,7 +17,6 @@ class Loginpage(Page):
         self.password_loc = password
         self.login_loc.click()
         self.get("http://webapp.leke.cn/leke-ai-pad/#/operation")
-        time.sleep(5)
         return Mainpage(self.driver)
 
 '''class Loginpage(Page):

@@ -26,7 +26,7 @@ rerun = "1"
 max_fail = "1"
 
 # 运行测试用例的目录或文件
-cases_path = "E:/git/cnstrong/ai_test/testcase/"
+cases_path = "./testcase/"
 
 ############################
 

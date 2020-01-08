@@ -14,8 +14,8 @@ logger = logging.getLogger(__name__)
 说明：
 1、用例创建原则，测试文件名必须以“test”开头，测试函数必须以“test”开头。
 2、运行方式：
-  > python3 run.py  (回归模式，生成HTML报告)
-  > python3 run.py -m debug  (调试模式)
+  > python run.py  (回归模式，生成HTML报告)
+  > python run.py -m debug  (调试模式，只运行用例)
 '''
 
 
