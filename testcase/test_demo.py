@@ -10,9 +10,9 @@ from page.login import Loginpage
 class TestDemo:
 
     def test_login(self,browser):
+        """登录"""
         self.login_page = Loginpage(browser)
         self.login_page.login('955112', 'a1234567')
-
 
 if __name__ == '__main__':
     pytest.main(["-v", "-s", "test_demo.py"])
