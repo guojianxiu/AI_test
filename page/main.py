@@ -5,6 +5,7 @@
 '''
 from poium import Page, PageElement
 from page.xiaole import Xiaolepage
+from page.wood import Woodpage
 
 class Mainpage(Page):
     xiaole_loc = PageElement(class_name='enterxiaole')
@@ -21,5 +22,6 @@ class Mainpage(Page):
 
     def wood(self):
         #学习森林
-        self._wood_loc.click()
+        self.wood_loc.click()
+        return Woodpage(self.driver)
 
