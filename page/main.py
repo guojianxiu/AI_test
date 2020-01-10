@@ -7,6 +7,7 @@ from poium import Page, PageElement,PageElements
 from page.xiaole import Xiaolepage
 from page.wood import Woodpage
 from page.task import Taskpage
+from page.cards import Cardspage
 
 
 class Mainpage(Page):
@@ -35,4 +36,5 @@ class Mainpage(Page):
         return Woodpage(self.driver)
 
     def card(self):
-        pass
+        self.get("http://webapp.leke.cn/leke-ai-pad/#/card")
+        return Cardspage(self.driver)
