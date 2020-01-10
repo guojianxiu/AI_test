@@ -134,7 +134,7 @@ def new_report_time():
 
 
 # 启动浏览器
-#@pytest.fixture(scope='session', autouse=True)
+
 @pytest.fixture(scope='class', autouse=True)
 def browser():
     """
@@ -196,7 +196,6 @@ def browser():
 
 
 # 关闭浏览器
-#@pytest.fixture(scope="session", autouse=True)
 @pytest.fixture(scope='class', autouse=True)
 def browser_close():
     yield driver
