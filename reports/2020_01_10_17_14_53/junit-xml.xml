@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="test-guojianxiu" name="pytest" skipped="0" tests="6" time="112.469" timestamp="2020-01-10T17:14:53.518445"><testcase classname="testcase.test_cards.Testcards" file="testcase\test_cards.py" line="5" name="test_cards" time="15.501"></testcase><testcase classname="testcase.test_demo.TestDemo" file="testcase\test_demo.py" line="11" name="test_login" time="14.668"></testcase><testcase classname="testcase.test_exercise.TestExercise" file="testcase\test_exercise.py" line="5" name="test_exercise" time="15.948"></testcase><testcase classname="testcase.test_task.TestTask" file="testcase\test_task.py" line="5" name="test_task" time="14.828"></testcase><testcase classname="testcase.test_wood.TestWood" file="testcase\test_wood.py" line="8" name="test_wood" time="17.311"></testcase><testcase classname="testcase.test_xiaole.TestXaiole" file="testcase\test_xiaole.py" line="11" name="test_xiaole" time="29.156"><failure message="AssertionError: assert &apos;123&apos; in &apos;三角函数综合的微课-1&apos;
+ +  where &apos;三角函数综合的微课-1&apos; = &lt;bound method Xiaolepage.get_answer of &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt;&gt;()
+ +    where &lt;bound method Xiaolepage.get_answer of &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt;&gt; = &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt;.get_answer
+ +      where &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt; = &lt;testcase.test_xiaole.TestXaiole object at 0x00000279AAFF1E10&gt;.xiaole_page">self = &lt;testcase.test_xiaole.TestXaiole object at 0x00000279AAFF1E10&gt;
+browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7274c14d79255901d4c06f00d20fcc0a&quot;)&gt;
+
+    def test_xiaole(self,browser):
+        &apos;&apos;&apos;登录&apos;&apos;&apos;
+        self.xiaole_page = Loginpage(browser).login(&apos;955112&apos;, &apos;a1234567&apos;).hi_xiaole()
+        self.xiaole_page.question(&apos;三角函数&apos;)
+&gt;       assert &apos;123&apos; in self.xiaole_page.get_answer()
+E       AssertionError: assert &apos;123&apos; in &apos;三角函数综合的微课-1&apos;
+E        +  where &apos;三角函数综合的微课-1&apos; = &lt;bound method Xiaolepage.get_answer of &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt;&gt;()
+E        +    where &lt;bound method Xiaolepage.get_answer of &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt;&gt; = &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt;.get_answer
+E        +      where &lt;page.xiaole.Xiaolepage object at 0x00000279AB004B70&gt; = &lt;testcase.test_xiaole.TestXaiole object at 0x00000279AAFF1E10&gt;.xiaole_page
+
+testcase\test_xiaole.py:16: AssertionError</failure></testcase></testsuite></testsuites>
