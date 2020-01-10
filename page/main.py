@@ -6,7 +6,6 @@
 from poium import Page, PageElement,PageElements
 from page.xiaole import Xiaolepage
 from page.wood import Woodpage
-from page.exercise import Exercisepage
 from page.task import Taskpage
 
 
