@@ -15,6 +15,7 @@ class Woodpage(Page):
 
     def get_log(self):
         #验证昨日得成长动态
+        #print(str(self.log_msg.text))
         return str(self.log_msg.text)
 
     def schoolmate(self):
