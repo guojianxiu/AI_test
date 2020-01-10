@@ -135,7 +135,7 @@ def new_report_time():
 
 
 # 启动浏览器
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='class', autouse=True)
 def browser():
     """
     全局定义浏览器驱动
@@ -196,7 +196,7 @@ def browser():
 
 
 # 关闭浏览器
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="class", autouse=True)
 def browser_close():
     yield driver
     driver.quit()
