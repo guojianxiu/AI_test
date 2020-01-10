@@ -17,7 +17,7 @@ REPORT_DIR = BASE_DIR + "\\reports\\"
 driver_type = "chrome_phone"
 
 # 配置运行的 URL
-#url = "https://www.baidu.com"
+url = "https://cas.leke.cn/login?service="
 
 # 失败重跑次数
 rerun = "1"
@@ -32,12 +32,11 @@ cases_path = "./testcase/"
 
 
 # 定义基本测试环境
-'''
+
 @pytest.fixture(scope='function')
 def base_url():
     global url
     return url
-'''
 
 # 设置用例描述表头
 @pytest.mark.optionalhook
@@ -135,6 +134,7 @@ def new_report_time():
 
 
 # 启动浏览器
+
 @pytest.fixture(scope='class', autouse=True)
 def browser():
     """
@@ -158,7 +158,7 @@ def browser():
         mobileEmulation = {"deviceMetrics": {"width": WIDTH, "height": HEIGHT, "pixelRatio": PIXEL_RATIO},"userAgent": UA}
         options = webdriver.ChromeOptions()
         options.add_experimental_option('mobileEmulation', mobileEmulation)
-        driver = webdriver.Chrome(executable_path='chromedriver.exe', chrome_options=options)
+        driver = webdriver.Chrome(chrome_options=options)
         driver.maximize_window()
         driver.implicitly_wait(10)
 
@@ -196,11 +196,11 @@ def browser():
 
 
 # 关闭浏览器
-@pytest.fixture(scope="class", autouse=True)
+@pytest.fixture(scope='class', autouse=True)
 def browser_close():
     yield driver
     driver.quit()
-    print("test end!")
+    print("test end!关闭浏览器")
 
 
 if __name__ == "__main__":

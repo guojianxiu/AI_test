@@ -32,7 +32,7 @@ def init_env(now_time):
 def run(m):
     if m is None or m == "run":
         logger.info("回归模式，开始执行")
-        now_time = time.strftime("%Y-%m-%d-%H-%M-%S")
+        now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
         init_env(now_time)
         html_report = os.path.join(REPORT_DIR, now_time, "report.html")
         xml_report = os.path.join(REPORT_DIR, now_time, "junit-xml.xml")

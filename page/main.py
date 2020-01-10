@@ -30,7 +30,7 @@ class Mainpage(Page):
         self.xiaole_loc.click()
         return Xiaolepage(self.driver)
 
-    def wood(self):
+    def woods(self):
         #学习森林
         self.wood_loc.click()
         return Woodpage(self.driver)
