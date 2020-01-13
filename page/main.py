@@ -8,6 +8,7 @@ from page.xiaole import Xiaolepage
 from page.wood import Woodpage
 from page.task import Taskpage
 from page.cards import Cardspage
+from page.exercise import Exercisepage
 
 
 class Mainpage(Page):
