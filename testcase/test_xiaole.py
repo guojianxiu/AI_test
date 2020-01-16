@@ -8,9 +8,8 @@ from page.login import Loginpage
 import pytest
 
 class TestXaiole():
-
     def test_xiaole(self,browser):
-        '''登录'''
+        '''智能问答'''
         self.xiaole_page = Loginpage(browser).login('955112', 'a1234567').hi_xiaole()
         self.xiaole_page.question('三角函数')
         assert '123' in self.xiaole_page.get_answer()

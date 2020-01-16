@@ -14,7 +14,7 @@ REPORT_DIR = BASE_DIR + "\\reports\\"
 ############################
 
 # 配置浏览器驱动类型(chrome/firefox/chrome-headless/firefox-headless)。
-driver_type = "chrome_phone"
+driver_type = "chrome_pad"
 
 # 配置运行的 URL
 url = "https://cas.leke.cn/login?service="
@@ -149,7 +149,7 @@ def browser():
         driver = webdriver.Chrome()
         driver.set_window_size(1920, 1080)
 
-    elif driver_type == "chrome_phone":
+    elif driver_type == "chrome_pad":
         # 学生按分辨率启动
         WIDTH = 960
         HEIGHT = 600
