@@ -5,17 +5,17 @@ import random
 class Exercisepage(Page):
     #选项元素标签是[2]--[6]
     question_loc = PageElement(class_name = 'slick-current')
-    question_list_loc = PageElements(class_name = 'slick - slide')
+    question_list_loc = PageElements(class_name = 'slick-slide')
     subit_loc = PageElement(class_name = 'submit_btn')
     #selects_loc = PageElement(xpath='/html/body/div[1]/div/div/div[3]/div[1]/div/div/div/div[' + str(x) + ']/div/div/div[3]/span[1]')
     selects_loc = PageElement(css = '.slick-active .option:nth-child(2) > .num')
 
     def do_exercise(self):
-        self.question_loc.click()
-        for x in range(0,10):
+        for x in range(0,len(self.question_list_loc)):
             self.selects_loc.click()
             time.sleep(2)
         time.sleep(20)
+        self.subit_loc.click()
 
 
         '''
