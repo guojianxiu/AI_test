@@ -9,6 +9,7 @@ from page.wood import Woodpage
 from page.task import Taskpage
 from page.cards import Cardspage
 from page.exercise import Exercisepage
+from page.exreport import Exreportpage
 
 
 class Mainpage(Page):
@@ -25,6 +26,11 @@ class Mainpage(Page):
             if task.text == "练习题":
                 task.click()
                 return Exercisepage(self.driver)
+    def exreport(self):
+        for task in self.tasks_loc:
+            if task.text == "练习题":
+                task.click()
+                return Exreportpage(self.driver)
 
     def hi_xiaole(self):
         #小乐同学
