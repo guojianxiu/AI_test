@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="test-guojianxiu" name="pytest" skipped="0" tests="3" time="68.940" timestamp="2020-01-10T17:12:57.551279"><testcase classname="testcase.test_cards.Testcards" file="testcase\test_cards.py" line="5" name="test_cards" time="16.502"></testcase><testcase classname="testcase.test_demo.TestDemo" file="testcase\test_demo.py" line="11" name="test_login" time="15.658"></testcase><testcase classname="testcase.test_exercise.TestExercise" file="testcase\test_exercise.py" line="5" name="test_exercise" time="31.097"><failure message="selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;p class=&quot;title grayColor&quot;&gt;...&lt;/p&gt; is not clickable at point (177, 349). Other element would receive the click: &lt;div class=&quot;mask&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=79.0.3945.88)">self = &lt;testcase.test_exercise.TestExercise object at 0x00000269CCA5B748&gt;
-browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;3107426d64c9283fa628ecaeb02bce54&quot;)&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="test-guojianxiu" name="pytest" skipped="0" tests="3" time="111.917" timestamp="2020-01-17T15:35:20.311012"><testcase classname="testcase.test_cards.Testcards" file="testcase\test_cards.py" line="5" name="test_cards" time="16.042"></testcase><testcase classname="testcase.test_demo.TestDemo" file="testcase\test_demo.py" line="11" name="test_login" time="16.215"></testcase><testcase classname="testcase.test_exercise.TestExercise" file="testcase\test_exercise.py" line="5" name="test_exercise" time="72.795"><failure message="selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;p class=&quot;title&quot;&gt;...&lt;/p&gt; is not clickable at point (177, 349). Other element would receive the click: &lt;div class=&quot;mask&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=79.0.3945.117)">self = &lt;testcase.test_exercise.TestExercise object at 0x00000292B2DAAA90&gt;
+browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;b1e39108477c09915bf4dafa6c7cff2e&quot;)&gt;
 
     def test_exercise(self,browser):
 &gt;       self.exercise_page = Loginpage(browser).login(&apos;955112&apos;, &apos;a1234567&apos;).exercise()
 
 testcase\test_exercise.py:7: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-page\main.py:26: in exercise
+page\main.py:38: in exercise
     task.click()
 D:\Python\lib\site-packages\selenium\webdriver\remote\webelement.py:80: in click
     self._execute(Command.CLICK_ELEMENT)
@@ -17,8 +17,8 @@ D:\Python\lib\site-packages\selenium\webdriver\remote\webdriver.py:321: in execu
     self.error_handler.check_response(response)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000269CCA5BB00&gt;
-response = {&apos;status&apos;: 400, &apos;value&apos;: &apos;{&quot;value&quot;:{&quot;error&quot;:&quot;element click intercepted&quot;,&quot;message&quot;:&quot;element click intercepted: Element ...\n\\tRtlGetAppContainerNamedObjectPath [0x773A7B74+228]\\n\\tRtlGetAppContainerNamedObjectPath [0x773A7B44+180]\\n&quot;}}&apos;}
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000292B2DAAE80&gt;
+response = {&apos;status&apos;: 400, &apos;value&apos;: &apos;{&quot;value&quot;:{&quot;error&quot;:&quot;element click intercepted&quot;,&quot;message&quot;:&quot;element click intercepted: Element ...\n\\tRtlGetAppContainerNamedObjectPath [0x77987B74+228]\\n\\tRtlGetAppContainerNamedObjectPath [0x77987B44+180]\\n&quot;}}&apos;}
 
     def check_response(self, response):
         &quot;&quot;&quot;
@@ -160,7 +160,7 @@ response = {&apos;status&apos;: 400, &apos;value&apos;: &apos;{&quot;value&quot;
                 alert_text = value[&apos;alert&apos;].get(&apos;text&apos;)
             raise exception_class(message, screen, stacktrace, alert_text)
 &gt;       raise exception_class(message, screen, stacktrace)
-E       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;p class=&quot;title grayColor&quot;&gt;...&lt;/p&gt; is not clickable at point (177, 349). Other element would receive the click: &lt;div class=&quot;mask&quot;&gt;...&lt;/div&gt;
-E         (Session info: chrome=79.0.3945.88)
+E       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;p class=&quot;title&quot;&gt;...&lt;/p&gt; is not clickable at point (177, 349). Other element would receive the click: &lt;div class=&quot;mask&quot;&gt;...&lt;/div&gt;
+E         (Session info: chrome=79.0.3945.117)
 
 D:\Python\lib\site-packages\selenium\webdriver\remote\errorhandler.py:242: ElementClickInterceptedException</failure></testcase></testsuite></testsuites>

@@ -17,6 +17,7 @@ class Loginpage(Page):
         self.password_loc = password
         self.login_loc.click()
         self.get("http://webapp.leke.cn/leke-ai-pad/#/operation")
+        #self.get("http://webapp.leke.cn/leke-ai-pad/#/redirect")
         return Mainpage(self.driver)
 
 '''class Loginpage(Page):
