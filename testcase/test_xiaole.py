@@ -12,7 +12,7 @@ class TestXaiole():
         '''智能问答'''
         self.xiaole_page = Loginpage(browser).login('955112', 'a1234567').hi_xiaole()
         self.xiaole_page.question('三角函数')
-        assert '123' in self.xiaole_page.get_answer()
+        assert '三角函数' in self.xiaole_page.get_answer()
 
 if __name__ == '__main__':
     pytest.main(["-v", "-s", "test_xiaole.py"])
